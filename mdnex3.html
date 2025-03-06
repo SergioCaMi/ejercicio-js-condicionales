@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Conditionals: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    let machineActive = true;
+    let pwd = "cheese";
+
+    let machineResult;
+    let pwdResult;
+
+    // Add your code here
+
+    if (machineActive) {
+        machineResult = "Maquina encendida";
+        pwdResult = (pwd == "cheese") ? "El usuario inició sesión correctamente" : "El usuario no inició sesión correctamente";
+    } else {
+        machineResult = "Maquina apagada";
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector("section");
+
+    let para1 = document.createElement("p");
+    let para2 = document.createElement("p");
+
+    para1.textContent = machineResult;
+    para2.textContent = pwdResult;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+</html>

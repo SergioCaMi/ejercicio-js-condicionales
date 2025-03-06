@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview"></section>
+
+  </body>
+  
+  
+  <script>
+    let response;
+    let score = 75;
+    let machineActive = true;
+  
+    // Add your code here
+
+    if (!machineActive) {
+        response = "Encienda el contestador";
+    } else if (score < 0 || score > 100) {
+        response = "Esto no es posible, se ha producido un error";
+    }else if (score >= 0 && score <= 19 ) {
+        response = "¡Esa fue una puntuación terrible, un fracaso total!";
+    }else if (score >= 20 && score <= 39 ) {
+        response = "Sabes algunas cosas, pero es una puntuación bastante mala. Necesitas mejorar";
+    }else if (score >= 40 && score <= 69 ) {
+        response = "¡Hiciste un trabajo pasable, no está mal!";
+    }else if (score >= 70 && score <= 89 ) {
+        response = "Es una puntuación excelente. Realmente sabes lo que dices";
+    }else if (score >= 90 && score <= 100 ) {
+        response = "¡Qué puntuación más increíble! ¿Hiciste trampa? ¿Hablas en serio?";
+    }
+
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+
+    para1.textContent = `Your score is ${ score }`;
+    para2.textContent = response;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+    
+  </script>
+
+</html>
